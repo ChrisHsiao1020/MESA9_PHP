@@ -5,14 +5,28 @@
         $x = $_GET['x'];
         $y = $_GET['y'];
         $op = $_GET['op'];
-        if($_GET['op'] == 1)
-            $result = $x + $y;      //integer
-        else if($_GET['op'] == 2)
-            $result = $x - $y;      //integer
-        else if($_GET['op'] == 3)
-            $result = $x * $y;      //integer
-        else if($_GET['op'] == 4)
-            $result = $x / $y;      //integer
+//        if($_GET['op'] == 1)
+//            $result = $x + $y;      //integer
+//        else if($_GET['op'] == 2)
+//            $result = $x - $y;      //integer
+//        else if($_GET['op'] == 3)
+//            $result = $x * $y;      //integer
+//        else if($_GET['op'] == 4)
+//            $result = $x / $y;      //integer
+        switch($_GET['op']) {
+            case 1:
+                $result = $x + $y;      //integer
+                break;
+            case 2:
+                $result = $x - $y;      //integer
+                break;
+            case 3:
+                $result = $x * $y;      //integer
+                break;
+            case 4:
+                $result = $x / $y;      //integer               //Homework 印出 整數......餘數
+                break;
+        }
 
 //        echo "{$x} + {$y} = {$result}";
 }
