@@ -13,7 +13,7 @@
 //            $result = $x * $y;      //integer
 //        else if($_GET['op'] == 4)
 //            $result = $x / $y;      //integer
-        switch($_GET['op']) {
+        switch($op) {
             case 1:
                 $result = $x + $y;      //integer
                 break;
