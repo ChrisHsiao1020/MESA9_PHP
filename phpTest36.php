@@ -1,6 +1,6 @@
 <?php
-    $fp = opendir("test1");                               // 相對路徑
-    $fp = opendir("/Applications/MAMP/htdocs/test1");     // / --> 根，絕對路徑
+    $fp = opendir("dir1");                               // 相對路徑
+    //$fp = opendir("/Applications/MAMP/htdocs/test1");     // / --> 根，絕對路徑
     //echo gettype($fp);            //目錄若不存在會傳回布林值
 
     while ($file = readdir($fp)){   //readdir讀不到時傳回0
