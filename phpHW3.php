@@ -3,26 +3,27 @@
 <br>
 <hr>
 
+<table border="1" width="100%">
 <?php
-    $primeNumber = array();
-    $j = 1;
-    for ($i=0; $i<100; $i++) {
-        $primeNumber[$i] = $j;
-        $j++;
-    }
-    $result = 0;
-    $isRepeat = '';
-    $repeatCount = 0;
-
-    for ($j=0; $j<10; $j++) {
-        for ($i = 2; $i < 10; $i++) {
-            if (($primeNumber[$j] % $i) == 0) {
-                if ($repeatCount < 1) {
-                    $repeatCount++;
-                    echo "{$primeNumber[$j]} is a Prime Number<br>";
-                }
+    $jTemp = 1;
+    for($k=1; $k<=2; $k++) {
+        echo '<tr>';
+        for ($j = $jTemp; $j <= 50*$k; $j++) {
+            for ($i = 2; $i <= $j; $i++) {
+                if ($j % $i == 0)
+                    break;
             }
+            if ($i == $j) {
+                //echo "{$i} is a Prime Number<br>";
+                echo '<td bgcolor="yellow">' . $i;
+            } else {
+                echo '<td>';
+                echo $j;
+            }
+            echo '</td>';
         }
+        $jTemp = $j;
+        echo '</tr>';
     }
-
-//echo "{$primeNumber[$i]} is not a Prime Number<br>";
+?>
+</table>
